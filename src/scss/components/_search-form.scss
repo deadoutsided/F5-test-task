@@ -1,0 +1,32 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.search-form {
+  @include mixins.border(1px, colors.$borders-color-main);
+  display: flex;
+  padding: 12px;
+  max-width: 720px;
+  background-color: colors.$bg-color;
+
+  &__btn {
+    @include mixins.reset_indents;
+    @include mixins.border(0px, colors.$borders-color-main);
+    background-color: colors.$bg-color;
+  }
+
+  &__input {
+    @include mixins.font(15px, 400, colors.$placeholder-color, 100%);
+    @include mixins.border(0px, colors.$borders-color-main);
+    padding: 12px 12px;
+    margin: 0 8px 0 0;
+    flex: 1;
+    /* width: fit-content; */ /* 
+        width: calc(100% - 16px - 115px); */
+  }
+
+  &__submit {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

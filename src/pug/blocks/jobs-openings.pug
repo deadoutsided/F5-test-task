@@ -1,0 +1,12 @@
+section.jobs-openings 
+    include ../mixins/_block-h2-title.pug 
+    +blockH2Title('Explore the latest job openings').jobs-openings__title
+    .jobs-openings__desc-n-link-wrapper 
+        p.jobs-openings__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mi rhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna.
+        include ../mixins/_button.pug 
+        +button('See All Jobs', 'link-button')
+    .jobs-openings__list 
+        include ../mixins/_job-card.pug 
+        -var jobs = [{company: { logo: 'dribble-icon.svg', name: 'Dribble', place: 'San Antonio' },date: 'October 25, 2022', tags: ['Marketing', 'Part Time'], salary:'130-160k', title: 'Front End Developer'}, {company: { logo: 'dribble-icon.svg', name: 'Dribble', place: 'Dallas' },date: 'October 25, 2022', tags: ['Design', 'Full Time'], salary:'50-70k', title: 'Backend Developer'}, {company: { logo: 'searchFormIcon.svg', name: 'Tokopedia', place: 'San Antonio' },date: 'March 30, 2021', tags: ['Marketing', 'Part Time'], salary:'130-160k', title: 'Scrum Master'}, {company: { logo: 'facebook-icon.svg', name: 'Facebook', place: 'Melbourne' },date: 'March 30, 2021', tags: ['Technology', 'Full Time'], salary:'210-240k', title: 'Lead Technical Architect'}, {company: { logo: 'spotify-icon.svg', name: 'Spotify', place: 'New York' },date: 'March 30, 2021', tags: ['Business', 'Casual'], salary:'50-70k', title: 'Digital Media Strategist'}, {company: { logo: 'pay-pal-icon.svg', name: 'Paypal', place: 'California' },date: 'March 30, 2021', tags: ['Business', 'Casual'], salary:'40-50k', title: 'Systems Administrator'}]
+        each job in jobs 
+            +jobCard(job)

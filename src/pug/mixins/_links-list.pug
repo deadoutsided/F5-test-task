@@ -1,0 +1,6 @@
+mixin linksList(padding=false)
+  -var links = {home: 'Home', company: 'Company', blog: 'Blog'}
+  ul(class='links-list' class!=attributes.class)
+        each val, key in links
+            li.links-list__link-wrapper
+                a.links-list__link(href=`/${key}` class=padding ? 'link-padding' : '')=val

@@ -1,0 +1,42 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.news-item {
+    padding: 9px;
+    @include mixins.border(1px, colors.$borders-color-main);
+    
+    &__img {
+        width: 100%;
+        max-height: 220px;
+        object-fit: fill;
+    }
+
+    &__desc-wrapper {
+        padding: 33px 23px 23px;
+    }
+
+    &__tag {
+        @include mixins.reset_indents;
+        @include mixins.font(14px, 400, colors.$secondary-color, 16.8px);
+        background-color: colors.$secondary-bg;
+        padding: 6px 12px;
+        width: fit-content;
+    }
+
+    &__title {
+        @include mixins.reset_indents;
+        @include mixins.font(20px, 700, colors.$text-ebony, 28px, -0.4px);
+        margin: 16px 0 0;
+    }
+
+    &__date-wrapper {
+        @include mixins.reset_indents;
+        padding: 0 0 0 16px;
+
+    }
+    
+    &__date {
+        @include mixins.font(14px, 600, colors.$text-bright, 24px, 1px);
+        margin: 16px 0 0;
+    }
+}

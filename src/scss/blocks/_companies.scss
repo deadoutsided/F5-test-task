@@ -1,0 +1,59 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.companies {
+  padding: 65px max(calc((100% - 1140px) / 2), 7%);
+  overflow: visible;
+
+  &__info-n-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 ;
+  }
+
+  &__desc {
+    @include mixins.reset_indents;
+    @include mixins.font(14px, 400, colors.$text-bright, 22.4px, -0.28px);
+    margin: 7px 0 0;
+  }
+
+  &__nav-btns {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__nav-btn {
+    @include mixins.border(1px, colors.$borders-color-main);
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    &_dir {
+      &_prev {
+        & > img {
+          transform: rotate(180deg);
+        }
+      }
+
+      /* &_next{
+
+        } */
+    }
+  }
+
+  /* &__list {
+    display: flex;
+    gap: 24px;
+  } */
+
+  &__item{
+    max-width: 390px;
+  }
+}
+
+/* .swiper {
+  width: 1140px;
+} */

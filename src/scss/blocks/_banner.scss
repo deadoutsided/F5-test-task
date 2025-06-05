@@ -1,0 +1,93 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.banner {
+  padding: 65px max(calc((100% - 1140px) / 2), 7%);
+
+  &__two-columns {
+    display: flex;
+    gap: 10%;
+    padding: 0 0 63px;
+  }
+
+  &__column-title {
+  }
+
+  &__title {
+    @include mixins.reset_indents;
+    @include mixins.font(
+      48px,
+      700,
+      colors.$text-ebony,
+      57px,
+      -0.96px,
+      "Archivo"
+    );
+    /* min-width: 600px; */
+    margin: 23px 0 0;
+  }
+
+  &__column-par {
+    display: flex;
+  }
+
+  &__desc {
+    @include mixins.font(16px, 400, colors.$text-main, 32px);
+    margin: auto 0 0;
+  }
+
+  &__search-form {
+    position: relative;
+    top: 35px;
+  }
+
+  &__img {
+    object-fit: contain;
+    margin: 0 0 76px;
+    width: 100%;
+  }
+}
+
+.badge {
+  display: flex;
+  background-color: colors.$batch-bg;
+  padding: 8px 16px 8px 8px;
+  gap: 12px;
+  align-items: center;
+  width: fit-content;
+
+  &__status {
+    @include mixins.font(12px, 600, colors.$secondary-color, 16px, 1px);
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background-color: colors.$bg-color;
+  }
+
+  &__par {
+    @include mixins.reset_indents;
+    @include mixins.font(12px, 500, colors.$text-ebony, 16px);
+  }
+}
+
+.sponsors-logos {
+  &__list {
+    @include mixins.reset_indents;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0 0;
+  }
+  /* &__link-wrapper {
+
+    } */
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.link-padding {
+  padding: 10px min(16px, 0.5vw);
+}

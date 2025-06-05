@@ -1,0 +1,29 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.jobs-openings {
+  padding: 64px max(calc((100% - 1140px)/2), 7%);
+  background-color: colors.$batch-bg;
+
+  /* &__title {
+    @include mixins.font(40px, 700, colors.$text-ebony, 48px, -0.8px, 'Archivo')
+  } */
+
+  &__desc-n-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__desc {
+    @include mixins.font(16px, 400, colors.$text-main, 28.8px, -0.32px);
+    max-width: 50%;
+  }
+
+  &__list {
+    margin: 58px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+}

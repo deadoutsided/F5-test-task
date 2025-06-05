@@ -1,0 +1,39 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.news {
+    padding: 64px max(calc((100% - 1140px) / 2), 7%);
+    
+    &__title-wrapper {
+        margin: 0 0 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    &__controls {
+        display: flex;
+        gap: 22px;
+    }
+
+    &__controls-btn {
+        @include mixins.border(1px, colors.$borders-color-main);
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        &_dir {
+            &_prev {
+                & > img {
+                    transform: rotate(180deg);
+                }
+        }
+
+        /* &_next{
+
+            } */
+    }
+    }
+}

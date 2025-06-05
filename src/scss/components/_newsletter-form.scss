@@ -1,0 +1,15 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+
+.newsletter-form {
+    display: flex;
+    gap: 16px;
+
+    &__email-input {
+        @include mixins.font(15px, 400, colors.$placeholder-color, 100%);
+        @include mixins.border(1px, colors.$borders-color-main);
+        padding: 15px 19px;
+        width:fit-content;
+        width: calc(100% - 16px - 115px);
+    }
+}

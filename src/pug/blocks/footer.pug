@@ -1,0 +1,12 @@
+footer.footer
+  a(href='/')
+    img(src='./images/logo.svg').footer__logo
+  .footer__two-columns 
+    .footer__pages
+      span.footer__column-title pages
+      include ../mixins/_links-list.pug
+      +linksList.footer__links-list
+    .footer__newsletter 
+      span.footer__column-title Sign up to our newsletter
+      include ../mixins/_newsletter-form.pug 
+      +newsletterForm.footer__newsletter-form

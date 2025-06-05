@@ -1,0 +1,42 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors';
+
+.link-button {
+    @include font(14px, 500, colors.$bg-color, 24px, -0.28px);
+    background-color: colors.$secondary-color;
+    text-decoration: none;
+}
+
+.submit-btn {
+    @include reset-indents;
+    @include font(14px, 500, colors.$bg-color, 24px, -0.28px);
+    border: none;
+    background-color: colors.$secondary-color;
+
+}
+
+.btn-padding-20 {
+    padding: 10px 20px;
+}
+
+.btn-padding-32 {
+    padding: 10px 32px;
+}
+
+.link-button_wide {
+    @include font(15px, 500, colors.$text-ebony, 24px, -0.3px);
+    background-color: colors.$batch-bg;
+}
+
+.button-wrapper {
+    width: 100%;
+    background-color: colors.$batch-bg;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 32px 0 0;
+    cursor: pointer;
+}

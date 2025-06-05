@@ -1,0 +1,20 @@
+section.banner 
+  .banner__two-columns 
+    .banner__column-title 
+      .badge
+        span.badge__status new 
+        p.badge__par Stay connected to get upcoming jobs
+      h1.banner__title Find the most exciting jobs in tech
+    .banner__column-par 
+      p.banner__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mirhoncus, pharetra leo et. Sign in or sign up to get started!
+  
+  include ../mixins/_search-form.pug 
+  +searchForm.banner__search-form
+  img(src='../images/banner-img.png').banner__img
+  .sponsors-logos
+    -var sponsors = {openTable: 'https://www.opentable.com/', hubSpot: 'https://www.hobspot.com/', amazon: 'https://www.amazon.com/', shopify: 'https://www.shopify.com/', slack: 'https://slack.com/', dropbox: 'https://www.dropbox.com/'}
+    ul.sponsors-logos__list
+        each val, key in sponsors
+            li.sponsors-logos__link-wrapper
+                a.sponsors-logos__link(href=`${val}`)
+                    img(src=`../images/${key}-logo.svg`).sponsors-logos__logo

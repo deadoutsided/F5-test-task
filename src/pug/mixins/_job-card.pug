@@ -1,0 +1,24 @@
+mixin jobCard(jobObj)
+    div(class='job-card' class!=attributes.class)
+        .job-card__company-info 
+            .job-card__logo-wrapper 
+                img(src=`../images/${jobObj.company.logo}`).job-card__logo
+            .job-card__name-n-date-wrapper 
+                p.job-card__company-name=`${jobObj.company.name}`
+                p.job-card__job-date=`${jobObj.date}`
+        h3.job-card__job-title=`${jobObj.title}`
+        ul.job-card__tags-wrapper
+            each val, ind in jobObj.tags 
+                if ind === 0
+                    li.job-card__tag.job-card__tag_color_blue=val
+                else 
+                    li.job-card__tag.job-card__tag_color_orange=val
+        .job-card__place-n-salary-wrapper 
+            .job-card__place-salary-batch 
+                img(src='../images/job-place-icon.svg').job-card__place-salary-icon
+                p.job-card__place-salary-par=`${jobObj.company.place}`
+            .job-card__place-salary-batch 
+                img(src='../images/job-salary-icon.svg').job-card__place-salary-icon
+                p.job-card__place-salary-par=`$${jobObj.salary}`
+                
+            

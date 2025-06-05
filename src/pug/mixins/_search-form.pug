@@ -1,0 +1,7 @@
+mixin searchForm()
+    form(class='search-form' class!=attributes.class)
+        button(type="button").search-form__btn 
+            img(src='../images/searchFormIcon.svg').search-form__loop-img
+        input(name='query' placeholder='Search…').search-form__input
+        include ./_button.pug 
+        +button('Search', 'submit', padding='32').search-form__submit

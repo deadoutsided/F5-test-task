@@ -1,0 +1,85 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.job-card {
+    @include mixins.border(1px, colors.$borders-color-main);
+    background-color: colors.$bg-color;
+    padding: 29px;
+
+    &__company-info {
+        display: flex;
+        gap: 14px;
+    }
+
+    &__logo-wrapper {
+        @include mixins.border(1px, colors.$borders-color-main);
+        width: 56px;
+        height: 56px;
+        display: grid;
+        place-items: center;
+    }
+
+    &__name-n-date-wrapper {
+
+    }
+
+    &__company-name {
+        @include mixins.reset_indents;
+        @include mixins.font(16px, 500, colors.$text-ebony, 28.8px, -0.32px);
+    }
+
+    &__job-date {
+        @include mixins.reset_indents;
+        @include mixins.font(14px, 400, colors.$text-bright, 22.4px, -0.28px);
+    }
+
+    &__job-title {
+        @include mixins.reset_indents;
+        @include mixins.font(18px, 700, colors.$text-ebony, 23.4px, 0%, 'Archivo');
+        margin: 23px 0 0;
+    }
+
+    &__tags-wrapper {
+        @include mixins.reset_indents;
+        list-style-type: none;
+        display: flex;
+        gap: 8px;
+        margin: 23px 0 24px;
+    }
+
+    &__tag {
+        @include mixins.reset_indents;
+        padding: 6px 12px;
+
+        &_color {
+            &_blue {
+                @include mixins.font(14px, 400, colors.$secondary-color, 16.8px, 0%);
+                background-color: colors.$secondary-bg;
+            }
+
+            &_orange {
+                @include mixins.font(14px, 400, colors.$tags-text-orange, 16.8px, 0%);
+                background-color: colors.$tags-bg-orange;
+            }
+        }
+    }
+
+    &__place-n-salary-wrapper {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__place-salary-batch {
+        display: flex;
+        align-items: center;
+    }
+
+    &__place-salary-icon {
+        margin: 0 4px 0 0 ;
+    }
+
+    &__place-salary-par {
+        @include mixins.reset_indents;
+        @include mixins.font(14px, 500, colors.$text-bright, 16.8px, -0.42px);
+    }
+}

@@ -1,0 +1,20 @@
+@use '../abstracts/mixins';
+@use '../abstracts/colors';
+
+.links-list {
+    @include mixins.reset_indents;
+    list-style-type: none;
+
+    /* &__link-wrapper {
+
+    } */
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.link-padding {
+    padding: 10px min(16px, 0.5vw);
+}

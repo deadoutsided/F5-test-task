@@ -1,0 +1,11 @@
+mixin companyCard(companyObj)
+    div(class='company-card' class!=attributes.class)
+        .company-card__info 
+            .company-card__logo-wrapper 
+                img(src=`../images/${companyObj.logo}`).company-card__logo
+            p.company-card__title=`${companyObj.name}`
+
+        p.company-card__desc=`${companyObj.desc}`
+        p.company-card__employees=`${companyObj.count} ${plural(companyObj.count, {other: 'employees', one: 'employee'})}`
+                
+            

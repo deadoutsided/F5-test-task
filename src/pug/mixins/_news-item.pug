@@ -1,0 +1,10 @@
+mixin newsItem({ title, tag, date, img, link })
+    include ./_button.pug 
+    .news-item 
+        img(src=`../images/${img}`).news-item__img
+        .news-item__desc-wrapper
+            p.news-item__tag=`${tag}`
+            h3.news-item__title=`${title}`
+            ul.news-item__date-wrapper
+                li.news-item__date=`${date}`
+            +button('Read More', type='wide')

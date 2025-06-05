@@ -1,0 +1,16 @@
+section.news 
+    include ../mixins/_block-h2-title.pug 
+    include ../mixins/_news-item.pug
+    - var news = [{title: 'Finding employees in the gig economy', tag: 'Resources', date: 'October 24, 2022', img: 'news_1.png', link:'/news/1'}, {title: 'How to make a great first impression everytime', tag: 'Education', date: 'October 24, 2022', img: 'news_2.png', link:'/news/2'}, {title: 'Find out the best paying careers in 2022', tag: 'Trends', date: 'October 24, 2022', img: 'news_3.png', link:'/news/3'}, {title: 'Ten things to nail your next job Interview', tag: 'Careers', date: 'October 24, 2022', img: 'news_4.png', link:'/news/4'}]
+    .news__title-wrapper
+        +blockH2Title('Get the latest news about jobs!')
+        .news__controls
+            .swiper-button-prev-news.news__controls-btn.news__controls-btn_dir_prev
+                img(src='../images/arrow.svg')
+            .swiper-button-next-news.news__controls-btn.news__controls-btn_dir_next
+                img(src='../images/arrow.svg')
+    .swiper-news 
+        .swiper-wrapper.news__list
+            each newItem in news 
+                .swiper-slide.companies__item
+                    +newsItem(newItem)

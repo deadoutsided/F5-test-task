@@ -1,0 +1,50 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.footer {
+  padding: 64px max(calc((100% - 1140px)/2), 7%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 51vh;
+
+  &__two-columns {
+    margin: 40px 0 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__column-title {
+    @include mixins.font(14px, 600, colors.$footer-titles, 25.2px, 1.12px);
+    text-transform: uppercase;
+    /* &:last-of-type {
+      margin: 0 0 16px;
+    } */
+  }
+
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__links-list {
+    @include mixins.font(14px, 400, colors.$text-ebony, 28px, -0.28px);
+  }
+
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 40%;
+    max-width: 450px;
+    min-width: 335px;
+  }
+
+  &__newsletter-form {
+    flex-wrap: wrap;
+    min-width: 335px;
+  }
+}

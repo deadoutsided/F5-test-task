@@ -1,0 +1,7 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.h2title {
+    @include mixins.reset_indents;
+    @include mixins.font(40px, 700, colors.$text-ebony, 48px, -0.8px, 'Archivo')
+}

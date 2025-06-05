@@ -1,0 +1,28 @@
+@mixin reset-indents {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font(
+  $fo-size,
+  $fo-weight,
+  $color: #fff,
+  $line-height: 141%,
+  $letter-spacing: 0%,
+  $fo-fam: "Inter"
+) {
+  font-family: $fo-fam;
+  font-size: $fo-size;
+  font-weight: $fo-weight;
+  line-height: $line-height;
+  color: $color;
+  letter-spacing: $letter-spacing;
+}
+
+
+@mixin border($border-width, $color: transparent, $radius: 0, $style: solid) {
+  border-width: $border-width;
+  border-style: $style;
+  border-color: $color;
+  border-radius: $radius;
+}

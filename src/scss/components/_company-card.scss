@@ -1,0 +1,57 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.company-card {
+    padding: 41px;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 24px;
+    }
+
+    &__logo-wrapper {
+        @include mixins.border(1px, colors.$borders-color-main);
+        width: 56px;
+        height: 56px;
+        display: grid;
+        place-items: center;
+    }
+
+    &__title {
+        @include mixins.reset_indents;
+        @include mixins.font(
+        18px,
+        700,
+        colors.$text-ebony,
+        23.4px,
+    ); 
+    }
+
+    &__desc {
+        @include mixins.reset_indents;
+        @include mixins.font(
+        16px,
+        400,
+        colors.$text-main,
+        28.8px,
+        -0.32px
+    ); 
+    }
+
+    &__employees{
+        @include mixins.reset_indents;
+        @include mixins.font(
+        14px,
+        500,
+        colors.$tags-text-green,
+        16.8px,
+    ); 
+        background-color: colors.$tags-bg-green;
+        padding: 10px 15px;
+        margin: 24px 0 0;
+        width: fit-content;
+    }
+}

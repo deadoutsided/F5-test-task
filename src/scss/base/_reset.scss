@@ -1,0 +1,10 @@
+@use '../abstracts/colors';
+@use '../abstracts/_mixins' as *;
+
+*, *:before, *:after { box-sizing: border-box; }
+
+body {
+    @include reset-indents;
+    /* color: $text-main;
+    background-image: $main-bg; */
+}

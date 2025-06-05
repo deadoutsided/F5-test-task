@@ -1,0 +1,33 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+
+.membership-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    background-color: colors.$batch-bg;
+
+    &__icon-wrapper {
+        width: 56px;
+        height: 56px;
+        display: grid;
+        place-items: center;
+        background-color: colors.$bg-color;
+    }
+
+    /* &__info {
+
+    } */
+
+    &__title {
+        @include mixins.reset_indents;
+        @include mixins.font(16px, 500, colors.$text-ebony, 28.8px, -0.32px)
+    }
+
+    &__desc {
+        @include mixins.reset_indents;
+        @include mixins.font(14px, 400, colors.$text-bright, 22.4px, -0.28px)
+    }
+}

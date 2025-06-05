@@ -1,0 +1,11 @@
+header.header
+  nav.header__nav
+    a(href='/')
+      img(src='./images/logo.svg').header__logo
+    include ../mixins/_links-list.pug
+    +linksList(true).header__links-list
+
+    .header__btns-links 
+        include ../mixins/_button.pug
+        a(href='/job').header__btn-link.link-padding Post a Job
+        +button('Log in', 'link-button', '/sign-in')

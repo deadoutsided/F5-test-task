@@ -1,0 +1,19 @@
+section.companies 
+    -var companies = [{logo: 'dribble-icon.svg', name: 'Dribble', count: '65', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}, {logo: 'pay-pal-icon.svg', name: 'Paypal', count: '6000', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}, {logo: 'spotify-icon.svg', name: 'Spotify', count: '2000', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}, {logo: 'slack-icon-company.svg', name: 'Slack', count: '400', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}, {logo: 'dribble-icon.svg', name: 'Dribble', count: '65', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}, {logo: 'slack-icon-company.svg', name: 'Slack', count: '65', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at dui mollis metus gravida tristique.'}]
+    include ../mixins/_block-h2-title.pug
+    include ../mixins/_company-card.pug
+    .companies__info-n-nav
+        .companies__info
+            +blockH2Title('Work with exciting companies').companies__title
+            p.companies__desc Discover more than 1,600 open positions
+        .companies__nav-btns 
+            .swiper-button-prev.companies__nav-btn.companies__nav-btn_dir_prev
+                img(src='../images/arrow.svg')
+            .swiper-button-next.companies__nav-btn.companies__nav-btn_dir_next
+                img(src='../images/arrow.svg')
+    .swiper 
+        .swiper-wrapper.companies__list
+            each company in companies 
+                .swiper-slide.companies__item
+                    +companyCard(company)
+    

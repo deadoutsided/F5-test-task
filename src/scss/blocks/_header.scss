@@ -1,0 +1,23 @@
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.header {
+  @include mixins.border(0 0 1px, colors.$borders-color-main);
+  width: 100%;
+  padding: 24px max(calc((100% - 1140px)/2), 7%);
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__links-list {
+    @include mixins.font(14px, 500, colors.$text-main, 24px, -0.28px);
+    display: flex;
+    gap: 12px;
+  }
+  &__btn-link {
+    @include mixins.font(14px, 500, colors.$text-main, 24px, -0.28px);
+    text-decoration: none;
+  }
+}

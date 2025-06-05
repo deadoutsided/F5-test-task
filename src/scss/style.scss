@@ -1,0 +1,25 @@
+@use './abstracts/colors';
+@use './abstracts/mixins' as *;
+@use 'base/reset';
+@use 'base/typography';
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/banner';
+@use 'blocks/jobs-openings';
+@use 'blocks/companies';
+@use 'blocks/membership-site';
+@use 'blocks/news';
+@use 'components/button';
+@use 'components/links-list';
+@use 'components/newsletter-form';
+@use 'components/search-form';
+@use 'components/job-card';
+@use 'components/block-h2-title';
+@use 'components/company-card';
+@use 'components/membership-content';
+@use 'components/news-item';
+@use '../../node_modules/swiper/swiper.scss';
+
+body {
+  background-color: colors.$bg-color;
+}

@@ -1,0 +1,5 @@
+mixin newsletterForm()
+  form(class='newsletter-form' class!=attributes.class)
+        input(type='email' name='email' placeholder='Email address').newsletter-form__email-input
+        include ../mixins/_button.pug 
+        +button('Get Started', 'submit')

@@ -1,0 +1,13 @@
+section.membership 
+    .membreship__promo 
+        img(src='../images/membership-photo.png').membreship__photo
+        p.membership__alt Partnership with Glassdoor and LinkedIn
+    .membershit__info
+        include ../mixins/_block-h2-title.pug 
+        +blockH2Title('Build a custom membership site with locked content.').membership__title
+        p.membership__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a mirhoncus, pharetra leo et, efficitur tortor. Fusce vel convallis magna, sit amet pulvinar diam. Sed laoreet feugiat consequat.
+        include ../mixins/_membership-content.pug
+        - var list = [1,2,3]
+        .membership__content-list
+            each val in list 
+                +membershipContent('Add a feature point here', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')

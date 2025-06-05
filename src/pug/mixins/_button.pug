@@ -1,0 +1,9 @@
+mixin button(text, type='link-button', to='/', padding='20')
+  if type === 'link-button'
+    a(class=`link-button btn-padding-${padding}` class!=attributes.class href=`${to}`)=text
+  else if type === 'submit'
+    button(class=`submit-btn btn-padding-${padding}` class!=attributes.class type='submit')=text 
+  else
+    .button-wrapper
+      a.link-button.link-button_wide=text 
+      img(src='./images/arrow.svg').link-button__arrow-icon
